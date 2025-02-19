@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/users/homepage";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout";
+import GioiThieu from "./pages/users/gioithieu";
 
 
 const renderUserRouter = () => {
@@ -9,14 +10,16 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.HOME,
             component: <HomePage />
+        },
+        {
+            path: ROUTERS.USER.GIOITHIEU,
+            component: <GioiThieu />
         }
     ]
 
     return (
         <MasterLayout>
             <Routes>
-
-                    // <Route path='/' element={<HomePage></HomePage>} />
                 {userRouters.map((item, key) => (
                     <Route key={key} path={item.path} element={item.component} />
                 ))}
