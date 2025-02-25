@@ -1,3 +1,32 @@
 .header_top {
-    background-color: red;
+    background-color: #F9F9F9;
+
+    .logo_company {
+        width: 180px;
+        display: flex;
+        margin: auto;
+    }
+
+    .content_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .align_phone_left {
+        text-align: left;
+    }
+
+    .align_booking_right {
+        text-align: right;
+    }
+
+
+
+    @media (max-width: 576px) {
+        .hidden_col {
+            display: none;
+        }
+    }
 }

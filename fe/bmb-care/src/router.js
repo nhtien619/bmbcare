@@ -3,6 +3,7 @@ import HomePage from "./pages/users/homepage";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout";
 import GioiThieu from "./pages/users/gioithieu";
+import DichVu from "./pages/users/dichvu";
 
 
 const renderUserRouter = () => {
@@ -14,6 +15,10 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.GIOITHIEU,
             component: <GioiThieu />
+        },
+        {
+            path: ROUTERS.USER.DICHVU,
+            component: <DichVu />
         }
     ]
 

@@ -9,12 +9,26 @@ body {
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    //color: #196DC0;
 }
 
-.container {
-    min-width: 1070px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+.header_container {
+    min-height: auto;
     //background: map.get($theme-color, "main");
+    background-color: map.get($theme-color, "light");
+    //background-color: #196DC0;
 }
+
+.btn_custom {
+    background-color: map.get($theme-color, "main") !important;
+}
+
+// .row {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+// .col-6 {
+//     flex: 0 0 50%;
+//     max-width: 50%;
+// }
