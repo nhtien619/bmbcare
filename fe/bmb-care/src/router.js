@@ -4,6 +4,8 @@ import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/users/theme/masterLayout";
 import GioiThieu from "./pages/users/gioithieu";
 import DichVu from "./pages/users/dichvu";
+import VeChungToi from "./pages/users/gioithieu/vechungtoi";
+import Lienhe from "./pages/users/gioithieu/lienhe";
 
 
 const renderUserRouter = () => {
@@ -15,6 +17,14 @@ const renderUserRouter = () => {
         {
             path: ROUTERS.USER.GIOITHIEU,
             component: <GioiThieu />
+        },
+        {
+            path: ROUTERS.USER.VECHUNGTOI,
+            component: <VeChungToi />
+        },
+        {
+            path: ROUTERS.USER.LIENHE,
+            component: <Lienhe />
         },
         {
             path: ROUTERS.USER.DICHVU,

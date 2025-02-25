@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ROUTERS } from "../../../../utils/router";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./menu_style.scss";
 
 const Menu = () => {
@@ -11,7 +11,16 @@ const Menu = () => {
         },
         {
             "name": "Giới Thiệu",
-            "path": ROUTERS.USER.GIOITHIEU
+            "path": ROUTERS.USER.GIOITHIEU,
+            "child": [
+                {
+                    "name": "Về Chúng Tôi",
+                    "path": ROUTERS.USER.VECHUNGTOI
+                },
+                {
+                    "name": "Liên Hệ",
+                    "path": ROUTERS.USER.LIENHE
+                }]
         },
         {
             "name": "Dịch Vụ",
@@ -19,6 +28,7 @@ const Menu = () => {
         }
     ]);
 
+    //className={menuKey === 0 ? "active" : ""}
 
     return (
         <>
@@ -26,8 +36,8 @@ const Menu = () => {
                 <ul>
                     {
                         menus?.map((menu, menuKey) => (
-                            <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
-                                <Link to={menu?.path}>{menu?.name}</Link>
+                            <li key={menuKey}>
+                                <NavLink to={menu?.path} relative="path">{menu?.name}</NavLink>
                             </li>
 
                         ))
